@@ -5,7 +5,7 @@
 ##### Functions
 * Gets current currency information from http://apis.is/currency/arion
 * MVO - Model-View-Octopus Implementation
-* Angular Framework Routing usage
+* Angular Framework Routing usage (Just testing it, no other usage from Angular)
 * Offline function (Already finished just have to add it)
 
 ##### Currently Working On
