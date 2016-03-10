@@ -19,7 +19,7 @@ h6 {
 }
 
 h1 {
-  color: #f5a623;
+  color: #5B767E;
 }
 
 h2 {
@@ -54,14 +54,14 @@ h5 {
 
 
 a {
-  color: #f5a623;
+  color: #5B767E;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 a:hover {
   text-decoration: none;
-  color: #f5a623;
+  color: #5B767E;
 }
 
 .gray {
@@ -85,4 +85,58 @@ img {
 
 span {
   padding: 5px;
+}
+.currency-list a {
+  color: #2c3e50;
+}
+.currency-list a:hover {
+  text-decoration: none;
+  color: #2c3e50;
+}
+.navbar {
+  background-color: #2c3e50;
+  display: block;
+  min-height: 70px;
+}
+.navbar #title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.itemTemplateWrapper {
+  display: block;
+    margin: 0 auto 10px;
+    padding-left: 15px;
+    padding-right: 25px;
+    min-height: 70px;
+    background-color: #fff;
+    max-width: 500px;
+    position: relative;
+}
+a img {
+  height:70px;
+  max-height: 70px;
+}
+
+h1 {
+  padding:0;
+  top:0;
+  margin-top:15px;
+  margin-left: 5px;
+  font-size: 28px;
+  margin-bottom: -5px;
+}
+span#longName {
+  margin-left: 3px;
+  margin-bottom: 5px;
+  font-size:15px;
+  clear:both;
+}
+#cur-value span{
+  top:0;
+  right:0;
+    position:absolute;
+    margin:0;
+    font-size: 2em;
 }
