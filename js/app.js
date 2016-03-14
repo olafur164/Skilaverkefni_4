@@ -6,7 +6,7 @@ $(function(){
 			//
 		},
 		getCurrencyList: function() {
-			// Láta modelið sækja gögn frá apis.is
+			// Sækji gögn frá http://apis.is/currency/arion
 			return $.get("http://apis.is/currency/arion").then( function( data, status, jqXHR ) { return data; });;
 		}
 	};
@@ -17,10 +17,12 @@ $(function(){
 			view.init();
 		},
 		getData: function() {
+			// Sækji gögn
 			return model.getCurrencyList();
 		},
 		getTemplate: function() {
-			return $.get("/Skilaverkefni_4/js/templates/index.handlebars").then( function( template, status, jqXHR ) { return template; });
+			// Sækji template fyrir upphafsíðu appsins.
+			return $.get("js/templates/index.handlebars").then( function( template, status, jqXHR ) { return template; });
 		},
 		getStuff: function() {
 			return $.when( octopus.getTemplate(), octopus.getData());
@@ -28,15 +30,17 @@ $(function(){
 	};
 
 	var octopusCalculator = {
-		init: function() {
+		init: function(val) {
 			model.init();
-			viewCalculator.init();
+			viewCalculator.init(val);
 		},
 		getData: function() {
+			// Sækji gögn
 			return model.getCurrencyList();
 		},
 		getTemplate: function() {
-			return $.get("/Skilaverkefni_4/js/templates/calculator.handlebars").then( function( template, status, jqXHR ) { return template; });
+			// Sækji template fyrir upphafsíðu appsins.
+			return $.get("js/templates/calculator.handlebars").then( function( template, status, jqXHR ) { return template; });
 		},
 		getStuff: function() {
 			return $.when( octopusCalculator.getTemplate(), octopusCalculator.getData());
@@ -58,15 +62,16 @@ $(function(){
 	};
 
 	var viewCalculator = {
-		init: function() {
+		init: function(val) {
 			this.getStuff = octopusCalculator.getStuff();
-			viewCalculator.render();
+			viewCalculator.render(val);
 		},
-		render: function() {
+		render: function(val) {
 			this.getStuff.done( function(template, data){
 				var renderer = Handlebars.compile(template);
-				var result = renderer(data);
+				var result = renderer(data.results[val]);
 				$('#container').html(result);
+				console.log(data.results[val]);
 			});
 		}
 	};
@@ -92,31 +97,34 @@ $(function(){
 			      octopus.init();
 			    })
 			    .controller('usd', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(1);
 			    })
 			    .controller('gbp', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(2);
 			    })
 			    .controller('eur', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(3);
 			    })
 			    .controller('cad', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(4);
 			    })
 			    .controller('dkk', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(5);
 			    })
 			    .controller('nok', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(6);
+			    })
+			    .controller('sek', function ($scope) {
+			      octopusCalculator.init(7);
 			    })
 			    .controller('chf', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(8);
 			    })
 			    .controller('jpy', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(9);
 			    })
 			    .controller('xdr', function ($scope) {
-			      octopusCalculator.init();
+			      octopusCalculator.init(10);
 			    })
 		}
 	};

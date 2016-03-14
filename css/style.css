@@ -94,15 +94,18 @@ span {
   color: #2c3e50;
 }
 .navbar {
-  background-color: #2c3e50;
+  background-color: #173e43;
   display: block;
   min-height: 70px;
+  border-radius: 0;
 }
-.navbar #title {
+.navbar .container {
+  max-width: 550px;
+}
+.navbar #title h1 {
     font-size: 24px;
     font-weight: 700;
-    color: white;
-    text-align: center;
+    color: #fff;
 }
 .itemTemplateWrapper {
   display: block;
@@ -110,7 +113,7 @@ span {
     padding-left: 15px;
     padding-right: 25px;
     min-height: 70px;
-    background-color: #fff;
+    background-color: #FFF;
     max-width: 500px;
     position: relative;
 }
