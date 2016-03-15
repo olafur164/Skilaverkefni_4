@@ -15,13 +15,16 @@
 * calculator for customs and VAT (VSK)
 
 
-### Hvað er MVC?
-MVC (Model-View-Controller) er mjög vinsælt í hönnun vef appa og er skipt í þrjú samtengd hlutverk, til þess að aðskilja hvernig gögn eru birt notanda eða samþykkt af notanda.
-M-Model:
-V-View:
-C-Controller:
-### Hvað þarf að huga að varðandi MVC í vefþróun?
+### 1. Hvað er MVC?
+MVC er forritunar mynstur sem byggist á því að skrifa meira skipulagðan kóða. MVC er samansett af þremur hlutum, Model-View-Controller.
+Controllerinn talar við Modelið, Modelið talar við Controllerinn, Controllerinn talar svo við Viewið og Viewið talar svo til baka við Controllerinn
 
-### Hverjir eru kostir þess að nota MV* í framenda (SPA og client-side MVC), Hvað gefur það okkur?
+* Modelið hefur að geyma gögn appsins. Modelið lætur hlustanda(observers) vita þegar staða þeirra breytist
+* Views mynda yfirleitt notendaviðmótið og notast oft við t.d. templates, þó þurfa þess ekki. Views hlusta á Models en hafa aldrei beint samband við þau.
+* Controllers taka á móti Input gögnum og aðgerðir frá notenda, Controllers uppfærir einnig Models
 
-### Hvað er Databinding?
+### 2. Hvað þarf að huga að varðandi MVC í vefþróun?
+
+### 3. Hverjir eru kostir þess að nota MV* í framenda (SPA og client-side MVC), Hvað gefur það okkur?
+
+### 4. Hvað er Databinding?
