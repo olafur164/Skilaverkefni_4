@@ -26,5 +26,7 @@ Controllerinn talar við Modelið, Modelið talar við Controllerinn, Controller
 ### 2. Hvað þarf að huga að varðandi MVC í vefþróun?
 
 ### 3. Hverjir eru kostir þess að nota MV* í framenda (SPA og client-side MVC), Hvað gefur það okkur?
+Helstu kostir MV* í framenda er að hver partur af MV* spilar sitt eigið hlutverk í virkni forrits.
 
 ### 4. Hvað er Databinding?
+Databinding er aðferð til sem bindur gögn frá gagnaveitandanum og neytandanum saman og samstillir þau.
