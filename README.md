@@ -24,6 +24,7 @@ Controllerinn talar við Modelið, Modelið talar við Controllerinn, Controller
 * Controllers taka á móti Input gögnum og aðgerðir frá notenda, Controllers uppfærir einnig Models
 
 ### 2. Hvað þarf að huga að varðandi MVC í vefþróun?
+Forðast að gera spaghetti kóða
 
 ### 3. Hverjir eru kostir þess að nota MV* í framenda (SPA og client-side MVC), Hvað gefur það okkur?
 Helstu kostir MV* í framenda er að hver partur af MV* spilar sitt eigið hlutverk í virkni forrits.
